@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2010 (http://www.altova.com) von ITSG GmbH (ITSG GmbH) bearbeitet -->
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Thomas Guenther (itsg) -->
+<xs:schema xmlns="beitragssatz" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:GI4X-basis="GI4X:/xml-schema/GI4X-basis/1.0" targetNamespace="beitragssatz" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0.0">
+	<xs:import namespace="GI4X:/xml-schema/GI4X-basis/1.0" schemaLocation="GI4X-basis-1.0.0.xsd"/>
+	<!--Globale Typen-->
+	<xs:complexType name="XmlDatei_Cpt">
+		<xs:sequence>
+			<xs:element name="Dateiname" type="GI4X-basis:ISO88591_Stp"/>
+			<xs:element name="Datum" type="GI4X-basis:Datum_Stp"/>
+			<xs:element name="Uhrzeit" type="GI4X-basis:ISO88591_Stp"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Vvknn_Stp">
+		<xs:annotation>
+			<xs:documentation>
+			Double mit 2 Vorkomma und 2 Nachkommastellen
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{1,2},\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Vvvknn_Stp">
+		<xs:annotation>
+			<xs:documentation>
+			Double mit 3 Vorkomma und 2 Nachkommastellen
+		</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(\d{1,3}(,)\d{2})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Vvvknnn_Std">
+		<xs:annotation>
+			<xs:documentation>
+				Double mit 3 Vorkomma und 3 Nachkommastellen
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(\d{1,3}(,)\d{3})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UME_Art_Stp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(U1_[2-6]{1})|(U(1|2)_1)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Globale Attribute-->
+	<xs:attributeGroup name="attribute_3_grp">
+		<xs:attribute name="bn" type="GI4X-basis:BNR_Stp" use="required"/>
+		<xs:attribute name="gueltig_ab" type="GI4X-basis:Datum_Stp" use="required"/>
+		<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="attr_ADR_grp">
+		<xs:attribute name="bn" type="GI4X-basis:BNR_Stp" use="required"/>
+		<xs:attribute name="kassenart" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:positiveInteger">
+					<xs:minInclusive value="10"/>
+					<xs:maxInclusive value="22"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="gueltig_ab" type="GI4X-basis:Datum_Stp" use="optional"/>
+		<xs:attribute name="gueltig_bis" type="GI4X-basis:Datum_Stp" use="optional"/>
+		<xs:attribute name="nachfolge_bn" type="GI4X-basis:BNR_Stp" use="optional"/>
+		<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="attr_EBS_grp">
+		<xs:attribute name="gueltig_ab" type="GI4X-basis:Datum_Stp" use="required"/>
+		<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="optional"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="Kontonummer_Stp">
+		<xs:annotation>
+			<xs:documentation>
+				Kontonummer. Die Kontonummer darf nur Ziffern enthalten und bis zu 10 Stellen lang sein.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{1,10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BLZ_Stp">
+		<xs:annotation>
+			<xs:documentation>
+				BLZ. In Deutschland haben Bankleitzahlen immer 8 Stellen. Nur Ziffern sind erlaubt.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="IBAN_Stp">
+		<xs:annotation>
+			<xs:documentation>
+				IBAN. Die IBAN setzt sich zusammen aus dem Länderkürzel "DE" für Deutschland, 
+				einer zweistelligen Prüfziffer, der zehnstelligen Kontonummer und der Bankleitzahl. 
+				Nur IBAN-Einträge deutscher Kontoverbindungen werden akzeptiert!
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="DE[0-9]{20}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BIC_Stp">
+		<xs:annotation>
+			<xs:documentation>
+        BIC. Max. 11 Stellen, nur Großbuchstaben sind erlaubt. Die ersten vier Stellen sind die frei gewählte,
+        alphanumerische Bankbezeichnung. Darauf folgt die Länderkennung ("DE" für Deutschland), gefolgt von
+        einer zweistellige Orts-/Regionsangabe. Die letzten drei Stellen können für Filialbezeichnungen
+        genutzt werden und sind frei wählbar. Sie können jedoch auch frei bleiben.
+        Nur BIC-Einträge deutscher Kontoverbindungen werden akzeptiert!
+      </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z0-9]{4}DE[A-Z0-9]{2}([A-Z0-9]{3}){0,1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--Struktur-->
+	<xs:element name="Beitragssatzdatei">
+		<xs:annotation>
+			<xs:documentation>Root Element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="GI4X-basis:Wurzel_Ctp">
+					<xs:sequence>
+						<xs:element name="HDR">
+							<xs:annotation>
+								<xs:documentation>Headerelement</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Ersteller" type="xs:string" fixed="ITSG GmbH"/>
+									<xs:element name="XML_Datei" type="XmlDatei_Cpt"/>
+									<xs:element name="Dateiname_XSD" type="GI4X-basis:ISO88591_Stp"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EBS" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Einheitsbeitragssatz</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Allgemein" type="Vvknn_Stp"/>
+									<xs:element name="Ermaessigt" type="Vvknn_Stp"/>
+									<xs:element name="Zusatzbeitrag" type="Vvknn_Stp"/>
+									<xs:element name="DZBAN" type="Vvknn_Stp"/>
+								</xs:sequence>
+								<xs:attributeGroup ref="attr_EBS_grp"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ADR" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Adresse der Krankenkassen</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Kurzbezeichnung" type="GI4X-basis:ISO88591_Stp"/>
+									<xs:element name="Name1" type="GI4X-basis:ISO88591_Stp"/>
+									<xs:element name="Name2" type="xs:string" minOccurs="0"/>
+									<xs:element name="Name3" type="xs:string" minOccurs="0"/>
+									<xs:element name="Anschrift" maxOccurs="2">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:choice>
+													<xs:element name="Postfach" type="xs:string" minOccurs="0"/>
+													<xs:element name="Strasse" type="GI4X-basis:Strasse_Stp" minOccurs="0"/>
+												</xs:choice>
+												<xs:element name="PLZ" type="GI4X-basis:Postleitzahl_Stp"/>
+												<xs:element name="Ort" type="GI4X-basis:Ort_Stp"/>
+											</xs:sequence>
+											<xs:attribute name="art">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="Postfach"/>
+														<xs:enumeration value="Anschrift"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Weburl" type="xs:anyURI" minOccurs="0"/>
+									<xs:element name="Kontodaten" minOccurs="0" maxOccurs="99">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="IBAN" type="IBAN_Stp"/>
+												<xs:element name="BIC" type="BIC_Stp"/>
+											</xs:sequence>
+											<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="DFUE" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="DAVBN">
+													<xs:complexType>
+														<xs:attribute name="bn" type="GI4X-basis:BNR_Stp"/>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="ASTBN" minOccurs="0">
+													<xs:complexType>
+														<xs:attribute name="bn" type="GI4X-basis:BNR_Stp"/>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="WLSTBN" minOccurs="0">
+													<xs:complexType>
+														<xs:attribute name="bn">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:minLength value="0"/>
+																	<xs:maxLength value="8"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+											<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="required"/>
+											<xs:attribute name="gueltig_ab" type="GI4X-basis:Datum_Stp" use="required"/>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="IK" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="IKNR" type="GI4X-basis:IK_Stp"/>
+												<xs:element name="gueltig_bis" type="GI4X-basis:Datum_Stp" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attributeGroup ref="attr_ADR_grp"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="UME" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Umlage- und Erstattungssaetze</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Umlagesatz" minOccurs="2" maxOccurs="7">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Erstattungssatz" type="Vvvknn_Stp"/>
+												<xs:element name="BBG_U1_U2_Mutterschaft">
+													<xs:simpleType>
+														<xs:restriction base="xs:int">
+															<xs:enumeration value="0"/>
+															<xs:enumeration value="1"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="Beitragssatz" type="Vvknn_Stp" minOccurs="0"/>
+												<xs:element name="BBG_U2_Beschaeftigungsverbot" minOccurs="0">
+													<xs:simpleType>
+														<xs:restriction base="xs:int">
+															<xs:enumeration value="0"/>
+															<xs:enumeration value="1"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="Erstattung_Beitrag_TP" default="9">
+													<xs:simpleType>
+														<xs:restriction base="xs:int">
+															<xs:enumeration value="0"/>
+															<xs:enumeration value="1"/>
+															<xs:enumeration value="2"/>
+															<xs:enumeration value="9"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+												<xs:element name="Erstattung_Tat_Pausch" type="Vvvknnn_Std" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="id" type="UME_Art_Stp" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attributeGroup ref="attribute_3_grp"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="KIBS" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Beitragssatz">
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="Vvknn_Stp"/>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="AG_gueltig_ab" type="GI4X-basis:Datum_Stp" minOccurs="0"/>
+									<xs:element name="ZS_gueltig_ab" type="GI4X-basis:Datum_Stp"/>
+								</xs:sequence>
+								<xs:attribute name="bn" type="GI4X-basis:BNR_Stp" use="required"/>
+								<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="required"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DAV" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OrgTyp">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="2"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="DAVBZ" type="GI4X-basis:ISO88591_Stp"/>
+									<xs:element name="DAVEmail" type="GI4X-basis:EmailAdresse_Stp" minOccurs="0"/>
+									<xs:element name="DAV_gueltig_ab" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="0"/>
+												<xs:maxLength value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="DAV_gueltig_bis" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="0"/>
+												<xs:maxLength value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="DAV_nachfolge_bn" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="0"/>
+												<xs:maxLength value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="bn" type="GI4X-basis:BNR_Stp" use="required"/>
+								<xs:attribute name="letzte_aenderung" type="GI4X-basis:Datum_Stp" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
