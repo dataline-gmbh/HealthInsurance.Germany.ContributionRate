@@ -8,6 +8,9 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
     {
         private static readonly System.Globalization.CultureInfo _cultureDE = new System.Globalization.CultureInfo("de-DE");
 
+        /// <summary>
+        /// Holt den Zeitstempel der Erstellung der Beitragssatzdatei
+        /// </summary>
         [XmlIgnore]
         public DateTimeOffset? Timestamp
         {

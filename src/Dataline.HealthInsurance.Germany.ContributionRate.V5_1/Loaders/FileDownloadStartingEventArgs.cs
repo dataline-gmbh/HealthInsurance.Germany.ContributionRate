@@ -10,21 +10,21 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
         private readonly BeitragssatzdateiInfo _info;
 
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="FileDownloadStartingEventArgs"/> Klasse.
         /// </summary>
-        /// <param name="info"></param>
+        /// <param name="info">Die internen Beitragssatzdatei-Informationen</param>
         public FileDownloadStartingEventArgs(BeitragssatzdateiInfo info)
         {
             _info = info;
         }
 
         /// <summary>
-        /// Der Dateiname
+        /// Holt den Dateinamen der Beitragssatzdatei
         /// </summary>
         public string Name => _info.FileName;
 
         /// <summary>
-        /// Die Länge der zu ladenden Datei
+        /// Holt die Länge der zu ladenden Datei
         /// </summary>
         public long? Length => _info.Length;
     }

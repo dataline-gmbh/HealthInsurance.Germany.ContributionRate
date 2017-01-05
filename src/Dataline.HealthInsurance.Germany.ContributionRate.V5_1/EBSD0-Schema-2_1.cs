@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+#pragma warning disable 1591
+
 // 
 // Dieser Quellcode wurde automatisch generiert von xsd, Version=4.6.81.0.
 // 

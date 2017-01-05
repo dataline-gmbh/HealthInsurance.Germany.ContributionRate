@@ -13,12 +13,12 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
         private static readonly Regex _bsdFileNameRegEx = new Regex(@"(?<test>[ET])BSD0-(?<type>(GES))(_V(?<version>[0-9]{2}))_(?<year>[0-9]{4})_(?<month>[0-9]{2})(?<day>[0-9]{2})\.(?<format>(ZIP)|(XML))", RegexOptions.IgnoreCase);
 
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="BeitragssatzdateiInfo"/> Klasse.
         /// </summary>
-        /// <param name="fileName"></param>
-        /// <param name="length"></param>
+        /// <param name="fileName">Der Dateiname der Beitragssatzdatei</param>
+        /// <param name="length">Die Länge der Beitragssatzdatei</param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        public BeitragssatzdateiInfo(string fileName, long? length)
+        internal BeitragssatzdateiInfo(string fileName, long? length)
         {
             Length = length;
 
@@ -42,32 +42,32 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
         }
 
         /// <summary>
-        /// Test-Daten?
+        /// Holt einen Wert, der angibt, ob dies eine Test-Beitragssatzdatei ist
         /// </summary>
         public bool IsTest { get; }
 
         /// <summary>
-        /// Zeitstempel der letzten Änderung
+        /// Holt den Zeitstempel der letzten Änderung
         /// </summary>
         public DateTime Timestamp { get; }
 
         /// <summary>
-        /// Datei-Name
+        /// Holt den Datei-Namen
         /// </summary>
         public string FileName { get; }
 
         /// <summary>
-        /// Version der Beitragssatzdatei
+        /// Holt die Version der Beitragssatzdatei
         /// </summary>
         public Version Version { get; }
 
         /// <summary>
-        /// Die Länge der Beitragssatzdatei
+        /// Holt die Länge der Beitragssatzdatei
         /// </summary>
         public long? Length { get; }
 
         /// <summary>
-        /// Holt das Dateiformat
+        /// Holt das Dateiformat (ZIP oder XML)
         /// </summary>
         public string Format { get; }
     }

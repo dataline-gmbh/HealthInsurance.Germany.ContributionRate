@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D31D3EB1-4561-4BCF-A1BF-F3DD2B28DF46}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		GlobalAssemblyInfo.cs = GlobalAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.HealthInsurance.Germany.ContributionRate.V5_1", "src\Dataline.HealthInsurance.Germany.ContributionRate.V5_1\Dataline.HealthInsurance.Germany.ContributionRate.V5_1.xproj", "{B22C1560-2A4B-45D8-98F1-29F24D6E7F94}"

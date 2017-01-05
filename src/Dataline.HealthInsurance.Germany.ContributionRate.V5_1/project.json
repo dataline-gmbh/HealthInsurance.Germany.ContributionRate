@@ -1,5 +1,7 @@
 ﻿{
-  "version": "1.0.0-*",
+  "version": "99.99.99.99",
+
+  "description": "Laden und Einlesen der GKV-Beitragssatzdatei Version 5.1",
 
   "configurations": {
     "Debug": {
@@ -13,6 +15,21 @@
         "debugType": "none",
         "xmlDoc": true,
         "optimize": true
+      }
+    }
+  },
+
+  "buildOptions": {
+    "compile": {
+      "includeFiles": "../../GlobalAssemblyInfo.cs"
+    }
+  },
+
+  "packOptions": {
+    "tags": [ "GKV", "Beitragssatzdatei", "5.1", "V5.1" ],
+    "files": {
+      "mappings": {
+        "/": "./NuGet/"
       }
     }
   },

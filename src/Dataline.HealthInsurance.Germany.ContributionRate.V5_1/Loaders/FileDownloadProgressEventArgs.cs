@@ -8,17 +8,17 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
     public class FileDownloadProgressEventArgs : EventArgs
     {
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="FileDownloadProgressEventArgs"/> Klasse.
         /// </summary>
-        /// <param name="position"></param>
+        /// <param name="position">Die Länge der bereits geladenen Daten</param>
         public FileDownloadProgressEventArgs(long position)
         {
             Position = position;
         }
 
         /// <summary>
-        /// Position der heruntergeladenen Datei
+        /// Holt die Position der heruntergeladenen Datei
         /// </summary>
-        public long Position { get; private set; }
+        public long Position { get; }
     }
 }

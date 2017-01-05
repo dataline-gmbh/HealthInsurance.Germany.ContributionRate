@@ -17,38 +17,16 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
         private static readonly Uri _baseUri = new Uri(@"https://beitragssatz.itsg.de/Downloads/");
 
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="ItsgServerLoader"/> Klasse.
         /// </summary>
-        /// <param name="deserializer"></param>
-        /// <param name="proxy"></param>
+        /// <param name="deserializer">Der zu verwendende <see cref="IDeserializer"/></param>
+        /// <param name="proxy">Der zu verwendende <see cref="IWebProxy"/></param>
         public ItsgServerLoader(IDeserializer deserializer, IWebProxy proxy)
             : base(deserializer, proxy)
         {
         }
 
-        private HttpClient CreateClient(Uri baseUrl = null)
-        {
-            var handler = new HttpClientHandler();
-            if (handler.SupportsRedirectConfiguration)
-            {
-                handler.AllowAutoRedirect = true;
-            }
-            if (Proxy != null && handler.SupportsProxy)
-            {
-                handler.Proxy = Proxy;
-                handler.UseProxy = true;
-            }
-            var client = new HttpClient(handler);
-            if (baseUrl != null)
-                client.BaseAddress = baseUrl;
-            return client;
-        }
-
-        /// <summary>
-        /// Informationen für eine bestimmte Beitragssatzdatei-Version laden (abbrechbar)
-        /// </summary>
-        /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public override async Task<BeitragssatzdateiInfo> LoadInfoAsync(CancellationToken ct)
         {
             using (var client = CreateClient(_baseUri))
@@ -63,11 +41,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
             }
         }
 
-        /// <summary>
-        /// Laden der Beitragssatzdateien (abbrechbar)
-        /// </summary>
-        /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public override async Task<Beitragssatzdatei> LoadAsync(CancellationToken ct)
         {
             var buffer = new byte[10000];
@@ -109,7 +83,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
                                     data.Position = 0;
                                 }
 
-                                ILocalLoader loader;
+                                IStreamingLoader loader;
                                 if (string.Equals(info.Format, "xml", StringComparison.OrdinalIgnoreCase))
                                 {
                                     loader = new StreamLoader(Deserializer);
@@ -135,6 +109,24 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
             {
                 OnDownloadFinished();
             }
+        }
+
+        private HttpClient CreateClient(Uri baseUrl = null)
+        {
+            var handler = new HttpClientHandler();
+            if (handler.SupportsRedirectConfiguration)
+            {
+                handler.AllowAutoRedirect = true;
+            }
+            if (Proxy != null && handler.SupportsProxy)
+            {
+                handler.Proxy = Proxy;
+                handler.UseProxy = true;
+            }
+            var client = new HttpClient(handler);
+            if (baseUrl != null)
+                client.BaseAddress = baseUrl;
+            return client;
         }
     }
 }

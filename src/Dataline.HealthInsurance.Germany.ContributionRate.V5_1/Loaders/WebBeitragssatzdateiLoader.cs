@@ -11,10 +11,10 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
     public abstract class WebBeitragssatzdateiLoader : IRemoteLoader
     {
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="WebBeitragssatzdateiLoader"/> Klasse.
         /// </summary>
-        /// <param name="deserializer"></param>
-        /// <param name="proxy"></param>
+        /// <param name="deserializer">Der zu verwendende <see cref="IDeserializer"/></param>
+        /// <param name="proxy">Der zu verwendende <see cref="IWebProxy"/></param>
         protected WebBeitragssatzdateiLoader(IDeserializer deserializer, IWebProxy proxy)
         {
             Proxy = proxy;
@@ -47,7 +47,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
         public event EventHandler FileDownloadFinished;
 
         /// <summary>
-        /// Proxy-Server
+        /// Holt den zu verwendenden Proxy-Server
         /// </summary>
         public IWebProxy Proxy { get; }
 
@@ -97,18 +97,10 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
             FileDownloadFinished?.Invoke(this, new EventArgs());
         }
 
-        /// <summary>
-        /// Laden der Beitragssatzdatei-Information
-        /// </summary>
-        /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public abstract Task<BeitragssatzdateiInfo> LoadInfoAsync(CancellationToken ct);
 
-        /// <summary>
-        /// Laden der Beitragssatzdatei
-        /// </summary>
-        /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public abstract Task<Beitragssatzdatei> LoadAsync(CancellationToken ct);
     }
 }

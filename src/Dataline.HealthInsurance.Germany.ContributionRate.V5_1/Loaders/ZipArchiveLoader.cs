@@ -10,25 +10,20 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
     /// <summary>
     /// Laden der Beitragssatzdatei(en) aus einer ZIP-Datei
     /// </summary>
-    public class ZipArchiveLoader : ILocalLoader
+    public class ZipArchiveLoader : IStreamingLoader
     {
         private readonly IDeserializer _deserializer;
 
         /// <summary>
-        /// Konstruktor
+        /// Initialisiert eine neue Instanz der <see cref="ZipArchiveLoader"/>-Klasse.
         /// </summary>
-        /// <param name="deserializer"></param>
+        /// <param name="deserializer">Der zu verwendende <see cref="IDeserializer"/></param>
         public ZipArchiveLoader(IDeserializer deserializer)
         {
             _deserializer = deserializer;
         }
 
-        /// <summary>
-        /// Laden der Beitragssatzdatei
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <param name="ct"></param>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public Task<Beitragssatzdatei> LoadAsync(Stream stream, CancellationToken ct)
         {
             using (var archive = new System.IO.Compression.ZipArchive(stream, System.IO.Compression.ZipArchiveMode.Read, true))
