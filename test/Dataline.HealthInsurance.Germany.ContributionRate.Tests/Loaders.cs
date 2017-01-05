@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,8 +9,11 @@ namespace Dataline.HealthInsurance.ContributionRateImport.Tests
     {
         public static Task<V5_1.Beitragssatzdatei> LoadTestV5_1Async()
         {
+            var asm = typeof(Loaders).GetTypeInfo().Assembly;
+            var rootPath = Path.GetDirectoryName(asm.Location);
+            var fileName = Path.Combine(rootPath, "Daten", "EBSD0-GES_V51_2016_0211.zip");
             var loader = new V5_1.Loaders.ZipArchiveLoader(new V5_1.BeitragssatzdateiDeserializer());
-            using (var fileStream = new FileStream(@"Daten\EBSD0-GES_V51_2016_0211.zip", FileMode.Open, FileAccess.Read))
+            using (var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             {
                 return loader.LoadAsync(fileStream, CancellationToken.None);
             }
