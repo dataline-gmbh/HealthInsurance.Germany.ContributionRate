@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
 {
     // ReSharper disable once InconsistentNaming
     public partial class XmlDatei_Cpt

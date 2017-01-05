@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
 {
     /// <summary>
     /// Schnittstelle für ein Lade-Modul für die Beitragssatzdatei

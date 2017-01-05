@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
 {
     /// <summary>
     /// Die Standard-Implementation der Deserialisierung der Beitragssatzdatei

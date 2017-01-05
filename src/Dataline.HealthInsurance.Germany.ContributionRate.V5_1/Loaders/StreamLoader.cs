@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
 {
     /// <summary>
     /// Laden der Beitragssatzdatei aus einem Stream

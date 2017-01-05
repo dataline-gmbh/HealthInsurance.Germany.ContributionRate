@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
 {
     /// <summary>
     /// Informationen über eine Beitragssatzdatei

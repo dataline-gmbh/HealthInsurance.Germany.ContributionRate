@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using Xunit;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.Tests
+namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
 {
     public class LoadTest
     {
@@ -14,7 +14,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.Tests
         [Fact]
         public async Task TestLoadV5()
         {
-            var doc = await Loaders.LoadTestV5_1Async();
+            var doc = await Loaders.LoadTestV5_1Async().ConfigureAwait(false);
 
             Assert.NotNull(doc);
             Assert.NotNull(doc.HDR);

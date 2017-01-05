@@ -3,7 +3,7 @@ using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
 {
     /// <summary>
     /// Basis-Klasse für Lade-Module, die die Beitragssatzdatei aus dem Internet laden

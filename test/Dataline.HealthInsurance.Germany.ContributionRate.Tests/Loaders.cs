@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.Tests
+namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
 {
     static class Loaders
     {

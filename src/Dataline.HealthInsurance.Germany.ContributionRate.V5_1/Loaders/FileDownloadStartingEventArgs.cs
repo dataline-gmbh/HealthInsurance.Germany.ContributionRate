@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
 {
     /// <summary>
     /// Event-Argumente für den Start des Downloads einer Beitragssatzdatei

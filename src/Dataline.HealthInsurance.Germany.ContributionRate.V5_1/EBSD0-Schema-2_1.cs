@@ -13,7 +13,7 @@
 // 
 // Dieser Quellcode wurde automatisch generiert von xsd, Version=4.6.81.0.
 // 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1 {
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     using System.Xml.Serialization;
     
     
@@ -117,7 +117,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1 {
         
         private string erstellerField;
         
-        private XmlDatei_Cpt xML_DateiField;
+        private Germany.ContributionRate.V5_1.XmlDatei_Cpt xML_DateiField;
         
         private string dateiname_XSDField;
         
@@ -139,7 +139,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public XmlDatei_Cpt XML_Datei {
+        public Germany.ContributionRate.V5_1.XmlDatei_Cpt XML_Datei {
             get {
                 return this.xML_DateiField;
             }

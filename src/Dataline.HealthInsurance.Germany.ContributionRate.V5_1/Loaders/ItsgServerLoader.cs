@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
+namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
 {
     /// <summary>
     /// Herunterladen der Beitragssatzdatei vom ITSG-Server
@@ -32,7 +32,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
             using (var client = CreateClient(_baseUri))
             {
                 var request = new HttpRequestMessage(HttpMethod.Head, @"DownloadGes51.aspx");
-                var response = await client.SendAsync(request, ct);
+                var response = await client.SendAsync(request, ct).ConfigureAwait(false);
                 var fileName = response.EnsureSuccessStatusCode().Content.Headers.ContentType.Parameters.Where(x => x.Name == "filename").Select(x => x.Value).SingleOrDefault();
                 if (string.IsNullOrEmpty(fileName))
                     throw new InvalidOperationException("Der ITSG-Server lieferte keinen Dateinamen für die Beitragssatzdatei.");
@@ -51,7 +51,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
             {
                 using (var client = CreateClient(_baseUri))
                 {
-                    using (var response = await client.GetAsync(@"DownloadGes51.aspx", HttpCompletionOption.ResponseHeadersRead, ct))
+                    using (var response = await client.GetAsync(@"DownloadGes51.aspx", HttpCompletionOption.ResponseHeadersRead, ct).ConfigureAwait(false))
                     {
                         var fileName = response
                             .EnsureSuccessStatusCode()
@@ -69,11 +69,11 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
                         {
                             using (var data = new MemoryStream())
                             {
-                                using (var stream = await response.Content.ReadAsStreamAsync())
+                                using (var stream = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
                                 {
                                     long fileBytesRead = 0;
                                     int bufferBytesRead;
-                                    while ((bufferBytesRead = await stream.ReadAsync(buffer, 0, buffer.Length, ct)) != 0)
+                                    while ((bufferBytesRead = await stream.ReadAsync(buffer, 0, buffer.Length, ct).ConfigureAwait(false)) != 0)
                                     {
                                         data.Write(buffer, 0, bufferBytesRead);
                                         fileBytesRead += bufferBytesRead;
@@ -95,7 +95,7 @@ namespace Dataline.HealthInsurance.ContributionRateImport.V5_1.Loaders
                                     loader = new ZipArchiveLoader(Deserializer);
                                 }
 
-                                return await loader.LoadAsync(data, ct);
+                                return await loader.LoadAsync(data, ct).ConfigureAwait(false);
                             }
                         }
                         finally
