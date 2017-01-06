@@ -34,10 +34,6 @@
     }
   },
 
-  "scripts": {
-    "precompile": "\"%project:Directory%/../../tools/xsd2\" -n:Dataline.HealthInsurance.Germany.ContributionRate.V5_1 \"-o:%project:Directory%\" /combine:EBSD0-Schema-2_1.cs /pcl /header /nullable \"%project:Directory%/Schemas/EBSD0-Schema-2.1.xsd\" \"/import:%project:Directory%/Schemas/GI4X-basis-1.0.0.xsd\""
-  },
-
   "frameworks": {
     "netstandard1.3": {
       "dependencies": {
