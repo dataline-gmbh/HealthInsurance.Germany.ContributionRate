@@ -278,8 +278,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime letzte_aenderung {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="letzte_aenderung")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _letzte_aenderung {
             get {
                 return this.letzte_aenderungField;
             }
@@ -290,12 +291,34 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool letzte_aenderungSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _letzte_aenderungSpecified {
             get {
                 return this.letzte_aenderungFieldSpecified;
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> letzte_aenderung {
+            get {
+                if (letzte_aenderungFieldSpecified) {
+                    return letzte_aenderungField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    letzte_aenderungFieldSpecified = true;
+                    letzte_aenderungField = value.Value;
+                }
+                else {
+                    letzte_aenderungFieldSpecified = false;
+                }
             }
         }
     }
@@ -460,8 +483,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime gueltig_ab {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="gueltig_ab")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _gueltig_ab {
             get {
                 return this.gueltig_abField;
             }
@@ -472,7 +496,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool gueltig_abSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _gueltig_abSpecified {
             get {
                 return this.gueltig_abFieldSpecified;
             }
@@ -482,8 +507,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime gueltig_bis {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="gueltig_bis")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _gueltig_bis {
             get {
                 return this.gueltig_bisField;
             }
@@ -494,7 +520,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool gueltig_bisSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _gueltig_bisSpecified {
             get {
                 return this.gueltig_bisFieldSpecified;
             }
@@ -515,8 +542,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime letzte_aenderung {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="letzte_aenderung")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _letzte_aenderung {
             get {
                 return this.letzte_aenderungField;
             }
@@ -527,12 +555,76 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool letzte_aenderungSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _letzte_aenderungSpecified {
             get {
                 return this.letzte_aenderungFieldSpecified;
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> gueltig_ab {
+            get {
+                if (gueltig_abFieldSpecified) {
+                    return gueltig_abField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    gueltig_abFieldSpecified = true;
+                    gueltig_abField = value.Value;
+                }
+                else {
+                    gueltig_abFieldSpecified = false;
+                }
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> gueltig_bis {
+            get {
+                if (gueltig_bisFieldSpecified) {
+                    return gueltig_bisField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    gueltig_bisFieldSpecified = true;
+                    gueltig_bisField = value.Value;
+                }
+                else {
+                    gueltig_bisFieldSpecified = false;
+                }
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> letzte_aenderung {
+            get {
+                if (letzte_aenderungFieldSpecified) {
+                    return letzte_aenderungField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    letzte_aenderungFieldSpecified = true;
+                    letzte_aenderungField = value.Value;
+                }
+                else {
+                    letzte_aenderungFieldSpecified = false;
+                }
             }
         }
     }
@@ -600,8 +692,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public BeitragssatzdateiADRAnschriftArt art {
+        [System.Xml.Serialization.XmlAttributeAttribute(AttributeName="art")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public BeitragssatzdateiADRAnschriftArt _art {
             get {
                 return this.artField;
             }
@@ -612,12 +705,34 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool artSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _artSpecified {
             get {
                 return this.artFieldSpecified;
             }
             set {
                 this.artFieldSpecified = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<BeitragssatzdateiADRAnschriftArt> art {
+            get {
+                if (artFieldSpecified) {
+                    return artField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    artFieldSpecified = true;
+                    artField = value.Value;
+                }
+                else {
+                    artFieldSpecified = false;
+                }
             }
         }
     }
@@ -681,8 +796,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime letzte_aenderung {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="letzte_aenderung")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _letzte_aenderung {
             get {
                 return this.letzte_aenderungField;
             }
@@ -693,12 +809,34 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool letzte_aenderungSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _letzte_aenderungSpecified {
             get {
                 return this.letzte_aenderungFieldSpecified;
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> letzte_aenderung {
+            get {
+                if (letzte_aenderungFieldSpecified) {
+                    return letzte_aenderungField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    letzte_aenderungFieldSpecified = true;
+                    letzte_aenderungField = value.Value;
+                }
+                else {
+                    letzte_aenderungFieldSpecified = false;
+                }
             }
         }
     }
@@ -858,7 +996,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
-        public System.DateTime gueltig_bis {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _gueltig_bis {
             get {
                 return this.gueltig_bisField;
             }
@@ -869,7 +1008,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool gueltig_bisSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _gueltig_bisSpecified {
             get {
                 return this.gueltig_bisFieldSpecified;
             }
@@ -886,6 +1026,27 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> gueltig_bis {
+            get {
+                if (gueltig_bisFieldSpecified) {
+                    return gueltig_bisField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    gueltig_bisFieldSpecified = true;
+                    gueltig_bisField = value.Value;
+                }
+                else {
+                    gueltig_bisFieldSpecified = false;
+                }
             }
         }
     }
@@ -940,8 +1101,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date")]
-        public System.DateTime letzte_aenderung {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="date", AttributeName="letzte_aenderung")]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _letzte_aenderung {
             get {
                 return this.letzte_aenderungField;
             }
@@ -952,12 +1114,34 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool letzte_aenderungSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _letzte_aenderungSpecified {
             get {
                 return this.letzte_aenderungFieldSpecified;
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> letzte_aenderung {
+            get {
+                if (letzte_aenderungFieldSpecified) {
+                    return letzte_aenderungField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    letzte_aenderungFieldSpecified = true;
+                    letzte_aenderungField = value.Value;
+                }
+                else {
+                    letzte_aenderungFieldSpecified = false;
+                }
             }
         }
     }
@@ -1019,7 +1203,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        public int BBG_U2_Beschaeftigungsverbot {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public int _BBG_U2_Beschaeftigungsverbot {
             get {
                 return this.bBG_U2_BeschaeftigungsverbotField;
             }
@@ -1030,7 +1215,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BBG_U2_BeschaeftigungsverbotSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _BBG_U2_BeschaeftigungsverbotSpecified {
             get {
                 return this.bBG_U2_BeschaeftigungsverbotFieldSpecified;
             }
@@ -1069,6 +1255,27 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
                 this.idField = value;
             }
         }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<int> BBG_U2_Beschaeftigungsverbot {
+            get {
+                if (bBG_U2_BeschaeftigungsverbotFieldSpecified) {
+                    return bBG_U2_BeschaeftigungsverbotField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    bBG_U2_BeschaeftigungsverbotFieldSpecified = true;
+                    bBG_U2_BeschaeftigungsverbotField = value.Value;
+                }
+                else {
+                    bBG_U2_BeschaeftigungsverbotFieldSpecified = false;
+                }
+            }
+        }
     }
     
     /// <remarks/>
@@ -1101,7 +1308,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
-        public System.DateTime AG_gueltig_ab {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public System.DateTime _AG_gueltig_ab {
             get {
                 return this.aG_gueltig_abField;
             }
@@ -1112,7 +1320,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AG_gueltig_abSpecified {
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool _AG_gueltig_abSpecified {
             get {
                 return this.aG_gueltig_abFieldSpecified;
             }
@@ -1151,6 +1360,27 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
+            }
+        }
+        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Nullable<System.DateTime> AG_gueltig_ab {
+            get {
+                if (aG_gueltig_abFieldSpecified) {
+                    return aG_gueltig_abField;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                if ((value != null)) {
+                    aG_gueltig_abFieldSpecified = true;
+                    aG_gueltig_abField = value.Value;
+                }
+                else {
+                    aG_gueltig_abFieldSpecified = false;
+                }
             }
         }
     }
