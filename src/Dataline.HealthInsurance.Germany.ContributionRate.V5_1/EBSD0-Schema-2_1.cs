@@ -36,7 +36,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.hDRField = value;
-                this.RaisePropertyChanged("HDR");
             }
         }
         
@@ -48,7 +47,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.eBSField = value;
-                this.RaisePropertyChanged("EBS");
             }
         }
         
@@ -60,7 +58,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.aDRField = value;
-                this.RaisePropertyChanged("ADR");
             }
         }
         
@@ -72,7 +69,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.uMEField = value;
-                this.RaisePropertyChanged("UME");
             }
         }
         
@@ -84,7 +80,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.kIBSField = value;
-                this.RaisePropertyChanged("KIBS");
             }
         }
         
@@ -96,7 +91,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAVField = value;
-                this.RaisePropertyChanged("DAV");
             }
         }
     }
@@ -105,7 +99,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiHDR : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiHDR {
         
         private string erstellerField;
         
@@ -125,7 +119,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.erstellerField = value;
-                this.RaisePropertyChanged("Ersteller");
             }
         }
         
@@ -137,7 +130,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.xML_DateiField = value;
-                this.RaisePropertyChanged("XML_Datei");
             }
         }
         
@@ -149,16 +141,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dateiname_XSDField = value;
-                this.RaisePropertyChanged("Dateiname_XSD");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -168,7 +150,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="beitragssatz")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="beitragssatz", IsNullable=true)]
-    public partial class XmlDatei_Cpt : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class XmlDatei_Cpt {
         
         private string dateinameField;
         
@@ -184,7 +166,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dateinameField = value;
-                this.RaisePropertyChanged("Dateiname");
             }
         }
         
@@ -196,7 +177,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.datumField = value;
-                this.RaisePropertyChanged("Datum");
             }
         }
         
@@ -208,16 +188,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.uhrzeitField = value;
-                this.RaisePropertyChanged("Uhrzeit");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -226,7 +196,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="GI4X:/xml-schema/GI4X-basis/1.0")]
-    public partial class Wurzel_Ctp : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Wurzel_Ctp {
         
         private string logische_versionField;
         
@@ -238,16 +208,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.logische_versionField = value;
-                this.RaisePropertyChanged("logische_version");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -256,7 +216,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiEBS : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiEBS {
         
         private string allgemeinField;
         
@@ -280,7 +240,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.allgemeinField = value;
-                this.RaisePropertyChanged("Allgemein");
             }
         }
         
@@ -292,7 +251,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.ermaessigtField = value;
-                this.RaisePropertyChanged("Ermaessigt");
             }
         }
         
@@ -304,7 +262,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.zusatzbeitragField = value;
-                this.RaisePropertyChanged("Zusatzbeitrag");
             }
         }
         
@@ -316,7 +273,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dZBANField = value;
-                this.RaisePropertyChanged("DZBAN");
             }
         }
         
@@ -328,7 +284,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_abField = value;
-                this.RaisePropertyChanged("gueltig_ab");
             }
         }
         
@@ -340,7 +295,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
             }
         }
         
@@ -352,16 +306,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
-                this.RaisePropertyChanged("letzte_aenderungSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -370,7 +314,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADR : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADR {
         
         private string kurzbezeichnungField;
         
@@ -416,7 +360,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.kurzbezeichnungField = value;
-                this.RaisePropertyChanged("Kurzbezeichnung");
             }
         }
         
@@ -428,7 +371,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.name1Field = value;
-                this.RaisePropertyChanged("Name1");
             }
         }
         
@@ -440,7 +382,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.name2Field = value;
-                this.RaisePropertyChanged("Name2");
             }
         }
         
@@ -452,7 +393,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.name3Field = value;
-                this.RaisePropertyChanged("Name3");
             }
         }
         
@@ -464,7 +404,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.anschriftField = value;
-                this.RaisePropertyChanged("Anschrift");
             }
         }
         
@@ -476,7 +415,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.weburlField = value;
-                this.RaisePropertyChanged("Weburl");
             }
         }
         
@@ -488,7 +426,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.kontodatenField = value;
-                this.RaisePropertyChanged("Kontodaten");
             }
         }
         
@@ -500,7 +437,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dFUEField = value;
-                this.RaisePropertyChanged("DFUE");
             }
         }
         
@@ -512,7 +448,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.ikField = value;
-                this.RaisePropertyChanged("IK");
             }
         }
         
@@ -524,7 +459,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
             }
         }
         
@@ -536,7 +470,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.kassenartField = value;
-                this.RaisePropertyChanged("kassenart");
             }
         }
         
@@ -548,7 +481,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_abField = value;
-                this.RaisePropertyChanged("gueltig_ab");
             }
         }
         
@@ -560,7 +492,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_abFieldSpecified = value;
-                this.RaisePropertyChanged("gueltig_abSpecified");
             }
         }
         
@@ -572,7 +503,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_bisField = value;
-                this.RaisePropertyChanged("gueltig_bis");
             }
         }
         
@@ -584,7 +514,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_bisFieldSpecified = value;
-                this.RaisePropertyChanged("gueltig_bisSpecified");
             }
         }
         
@@ -596,7 +525,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.nachfolge_bnField = value;
-                this.RaisePropertyChanged("nachfolge_bn");
             }
         }
         
@@ -608,7 +536,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
             }
         }
         
@@ -620,16 +547,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
-                this.RaisePropertyChanged("letzte_aenderungSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -638,7 +555,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRAnschrift : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRAnschrift {
         
         private string itemField;
         
@@ -662,7 +579,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.itemField = value;
-                this.RaisePropertyChanged("Item");
             }
         }
         
@@ -674,7 +590,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.itemElementNameField = value;
-                this.RaisePropertyChanged("ItemElementName");
             }
         }
         
@@ -686,7 +601,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.pLZField = value;
-                this.RaisePropertyChanged("PLZ");
             }
         }
         
@@ -698,7 +612,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.ortField = value;
-                this.RaisePropertyChanged("Ort");
             }
         }
         
@@ -710,7 +623,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.artField = value;
-                this.RaisePropertyChanged("art");
             }
         }
         
@@ -722,16 +634,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.artFieldSpecified = value;
-                this.RaisePropertyChanged("artSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -764,7 +666,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRKontodaten : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRKontodaten {
         
         private string iBANField;
         
@@ -782,7 +684,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.iBANField = value;
-                this.RaisePropertyChanged("IBAN");
             }
         }
         
@@ -794,7 +695,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bICField = value;
-                this.RaisePropertyChanged("BIC");
             }
         }
         
@@ -806,7 +706,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
             }
         }
         
@@ -818,16 +717,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
-                this.RaisePropertyChanged("letzte_aenderungSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -836,7 +725,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRDFUE : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRDFUE {
         
         private BeitragssatzdateiADRDFUEDAVBN dAVBNField;
         
@@ -856,7 +745,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAVBNField = value;
-                this.RaisePropertyChanged("DAVBN");
             }
         }
         
@@ -868,7 +756,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.aSTBNField = value;
-                this.RaisePropertyChanged("ASTBN");
             }
         }
         
@@ -880,7 +767,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.wLSTBNField = value;
-                this.RaisePropertyChanged("WLSTBN");
             }
         }
         
@@ -892,7 +778,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
             }
         }
         
@@ -904,16 +789,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_abField = value;
-                this.RaisePropertyChanged("gueltig_ab");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -922,7 +797,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRDFUEDAVBN : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRDFUEDAVBN {
         
         private string bnField;
         
@@ -934,16 +809,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -952,7 +817,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRDFUEASTBN : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRDFUEASTBN {
         
         private string bnField;
         
@@ -964,16 +829,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -982,7 +837,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRDFUEWLSTBN : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRDFUEWLSTBN {
         
         private string bnField;
         
@@ -994,16 +849,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1012,7 +857,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiADRIK : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiADRIK {
         
         private string iKNRField;
         
@@ -1030,7 +875,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.iKNRField = value;
-                this.RaisePropertyChanged("IKNR");
             }
         }
         
@@ -1042,7 +886,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_bisField = value;
-                this.RaisePropertyChanged("gueltig_bis");
             }
         }
         
@@ -1054,7 +897,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_bisFieldSpecified = value;
-                this.RaisePropertyChanged("gueltig_bisSpecified");
             }
         }
         
@@ -1066,16 +908,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1084,7 +916,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiUME : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiUME {
         
         private BeitragssatzdateiUMEUmlagesatz[] umlagesatzField;
         
@@ -1104,7 +936,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.umlagesatzField = value;
-                this.RaisePropertyChanged("Umlagesatz");
             }
         }
         
@@ -1116,7 +947,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
             }
         }
         
@@ -1128,7 +958,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.gueltig_abField = value;
-                this.RaisePropertyChanged("gueltig_ab");
             }
         }
         
@@ -1140,7 +969,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
             }
         }
         
@@ -1152,16 +980,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungFieldSpecified = value;
-                this.RaisePropertyChanged("letzte_aenderungSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1170,7 +988,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiUMEUmlagesatz : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiUMEUmlagesatz {
         
         private string erstattungssatzField;
         
@@ -1200,7 +1018,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.erstattungssatzField = value;
-                this.RaisePropertyChanged("Erstattungssatz");
             }
         }
         
@@ -1212,7 +1029,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bBG_U1_U2_MutterschaftField = value;
-                this.RaisePropertyChanged("BBG_U1_U2_Mutterschaft");
             }
         }
         
@@ -1224,7 +1040,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.beitragssatzField = value;
-                this.RaisePropertyChanged("Beitragssatz");
             }
         }
         
@@ -1236,7 +1051,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bBG_U2_BeschaeftigungsverbotField = value;
-                this.RaisePropertyChanged("BBG_U2_Beschaeftigungsverbot");
             }
         }
         
@@ -1248,7 +1062,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bBG_U2_BeschaeftigungsverbotFieldSpecified = value;
-                this.RaisePropertyChanged("BBG_U2_BeschaeftigungsverbotSpecified");
             }
         }
         
@@ -1260,7 +1073,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.erstattung_Beitrag_TPField = value;
-                this.RaisePropertyChanged("Erstattung_Beitrag_TP");
             }
         }
         
@@ -1272,7 +1084,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.erstattung_Tat_PauschField = value;
-                this.RaisePropertyChanged("Erstattung_Tat_Pausch");
             }
         }
         
@@ -1284,16 +1095,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1302,7 +1103,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiKIBS : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiKIBS {
         
         private BeitragssatzdateiKIBSBeitragssatz beitragssatzField;
         
@@ -1324,7 +1125,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.beitragssatzField = value;
-                this.RaisePropertyChanged("Beitragssatz");
             }
         }
         
@@ -1336,7 +1136,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.aG_gueltig_abField = value;
-                this.RaisePropertyChanged("AG_gueltig_ab");
             }
         }
         
@@ -1348,7 +1147,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.aG_gueltig_abFieldSpecified = value;
-                this.RaisePropertyChanged("AG_gueltig_abSpecified");
             }
         }
         
@@ -1360,7 +1158,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.zS_gueltig_abField = value;
-                this.RaisePropertyChanged("ZS_gueltig_ab");
             }
         }
         
@@ -1372,7 +1169,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
             }
         }
         
@@ -1384,16 +1180,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1402,7 +1188,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiKIBSBeitragssatz : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiKIBSBeitragssatz {
         
         private string valueField;
         
@@ -1414,16 +1200,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -1432,7 +1208,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
-    public partial class BeitragssatzdateiDAV : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BeitragssatzdateiDAV {
         
         private string orgTypField;
         
@@ -1458,7 +1234,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.orgTypField = value;
-                this.RaisePropertyChanged("OrgTyp");
             }
         }
         
@@ -1470,7 +1245,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAVBZField = value;
-                this.RaisePropertyChanged("DAVBZ");
             }
         }
         
@@ -1482,7 +1256,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAVEmailField = value;
-                this.RaisePropertyChanged("DAVEmail");
             }
         }
         
@@ -1494,7 +1267,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAV_gueltig_abField = value;
-                this.RaisePropertyChanged("DAV_gueltig_ab");
             }
         }
         
@@ -1506,7 +1278,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAV_gueltig_bisField = value;
-                this.RaisePropertyChanged("DAV_gueltig_bis");
             }
         }
         
@@ -1518,7 +1289,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.dAV_nachfolge_bnField = value;
-                this.RaisePropertyChanged("DAV_nachfolge_bn");
             }
         }
         
@@ -1530,7 +1300,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.bnField = value;
-                this.RaisePropertyChanged("bn");
             }
         }
         
@@ -1542,16 +1311,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
             }
             set {
                 this.letzte_aenderungField = value;
-                this.RaisePropertyChanged("letzte_aenderung");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
