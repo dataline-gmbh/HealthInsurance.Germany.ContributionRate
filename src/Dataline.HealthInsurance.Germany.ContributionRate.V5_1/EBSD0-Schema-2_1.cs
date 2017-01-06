@@ -29,7 +29,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private BeitragssatzdateiDAV[] dAVField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BeitragssatzdateiHDR HDR {
             get {
                 return this.hDRField;
@@ -40,7 +39,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EBS", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("EBS")]
         public BeitragssatzdateiEBS[] EBS {
             get {
                 return this.eBSField;
@@ -51,7 +50,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ADR", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("ADR")]
         public BeitragssatzdateiADR[] ADR {
             get {
                 return this.aDRField;
@@ -62,7 +61,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("UME", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute("UME")]
         public BeitragssatzdateiUME[] UME {
             get {
                 return this.uMEField;
@@ -73,7 +72,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("KIBS", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("KIBS")]
         public BeitragssatzdateiKIBS[] KIBS {
             get {
                 return this.kIBSField;
@@ -84,7 +83,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DAV", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("DAV")]
         public BeitragssatzdateiDAV[] DAV {
             get {
                 return this.dAVField;
@@ -112,7 +111,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Ersteller {
             get {
                 return this.erstellerField;
@@ -123,7 +121,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public XmlDatei_Cpt XML_Datei {
             get {
                 return this.xML_DateiField;
@@ -134,7 +131,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Dateiname_XSD {
             get {
                 return this.dateiname_XSDField;
@@ -159,7 +155,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private string uhrzeitField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Dateiname {
             get {
                 return this.dateinameField;
@@ -170,7 +165,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         public System.DateTime Datum {
             get {
                 return this.datumField;
@@ -181,7 +176,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Uhrzeit {
             get {
                 return this.uhrzeitField;
@@ -233,7 +227,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private bool letzte_aenderungFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Allgemein {
             get {
                 return this.allgemeinField;
@@ -244,7 +237,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string Ermaessigt {
             get {
                 return this.ermaessigtField;
@@ -255,7 +247,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Zusatzbeitrag {
             get {
                 return this.zusatzbeitragField;
@@ -266,7 +257,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string DZBAN {
             get {
                 return this.dZBANField;
@@ -353,7 +343,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private bool letzte_aenderungFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Kurzbezeichnung {
             get {
                 return this.kurzbezeichnungField;
@@ -364,7 +353,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string Name1 {
             get {
                 return this.name1Field;
@@ -375,7 +363,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Name2 {
             get {
                 return this.name2Field;
@@ -386,7 +373,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string Name3 {
             get {
                 return this.name3Field;
@@ -397,7 +383,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Anschrift", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute("Anschrift")]
         public BeitragssatzdateiADRAnschrift[] Anschrift {
             get {
                 return this.anschriftField;
@@ -408,7 +394,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
         public string Weburl {
             get {
                 return this.weburlField;
@@ -419,7 +405,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Kontodaten", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("Kontodaten")]
         public BeitragssatzdateiADRKontodaten[] Kontodaten {
             get {
                 return this.kontodatenField;
@@ -430,7 +416,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("DFUE", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute("DFUE")]
         public BeitragssatzdateiADRDFUE[] DFUE {
             get {
                 return this.dFUEField;
@@ -441,7 +427,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IK", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute("IK")]
         public BeitragssatzdateiADRIK[] IK {
             get {
                 return this.ikField;
@@ -570,8 +556,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private bool artFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Postfach", typeof(string), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("Strasse", typeof(string), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Postfach", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("Strasse", typeof(string))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public string Item {
             get {
@@ -594,7 +580,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string PLZ {
             get {
                 return this.pLZField;
@@ -605,7 +590,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Ort {
             get {
                 return this.ortField;
@@ -677,7 +661,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private bool letzte_aenderungFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string IBAN {
             get {
                 return this.iBANField;
@@ -688,7 +671,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string BIC {
             get {
                 return this.bICField;
@@ -738,7 +720,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private System.DateTime gueltig_abField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BeitragssatzdateiADRDFUEDAVBN DAVBN {
             get {
                 return this.dAVBNField;
@@ -749,7 +730,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public BeitragssatzdateiADRDFUEASTBN ASTBN {
             get {
                 return this.aSTBNField;
@@ -760,7 +740,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public BeitragssatzdateiADRDFUEWLSTBN WLSTBN {
             get {
                 return this.wLSTBNField;
@@ -868,7 +847,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private System.DateTime letzte_aenderungField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string IKNR {
             get {
                 return this.iKNRField;
@@ -879,7 +857,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         public System.DateTime gueltig_bis {
             get {
                 return this.gueltig_bisField;
@@ -929,7 +907,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private bool letzte_aenderungFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Umlagesatz", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("Umlagesatz")]
         public BeitragssatzdateiUMEUmlagesatz[] Umlagesatz {
             get {
                 return this.umlagesatzField;
@@ -1011,7 +989,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string Erstattungssatz {
             get {
                 return this.erstattungssatzField;
@@ -1022,7 +999,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public int BBG_U1_U2_Mutterschaft {
             get {
                 return this.bBG_U1_U2_MutterschaftField;
@@ -1033,7 +1009,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string Beitragssatz {
             get {
                 return this.beitragssatzField;
@@ -1044,7 +1019,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public int BBG_U2_Beschaeftigungsverbot {
             get {
                 return this.bBG_U2_BeschaeftigungsverbotField;
@@ -1066,7 +1040,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public int Erstattung_Beitrag_TP {
             get {
                 return this.erstattung_Beitrag_TPField;
@@ -1077,7 +1050,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string Erstattung_Tat_Pausch {
             get {
                 return this.erstattung_Tat_PauschField;
@@ -1118,7 +1090,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private System.DateTime letzte_aenderungField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public BeitragssatzdateiKIBSBeitragssatz Beitragssatz {
             get {
                 return this.beitragssatzField;
@@ -1129,7 +1100,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         public System.DateTime AG_gueltig_ab {
             get {
                 return this.aG_gueltig_abField;
@@ -1151,7 +1122,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
         public System.DateTime ZS_gueltig_ab {
             get {
                 return this.zS_gueltig_abField;
@@ -1227,7 +1198,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         private System.DateTime letzte_aenderungField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string OrgTyp {
             get {
                 return this.orgTypField;
@@ -1238,7 +1208,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string DAVBZ {
             get {
                 return this.dAVBZField;
@@ -1249,7 +1218,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string DAVEmail {
             get {
                 return this.dAVEmailField;
@@ -1260,7 +1228,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string DAV_gueltig_ab {
             get {
                 return this.dAV_gueltig_abField;
@@ -1271,7 +1238,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string DAV_gueltig_bis {
             get {
                 return this.dAV_gueltig_bisField;
@@ -1282,7 +1248,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string DAV_nachfolge_bn {
             get {
                 return this.dAV_nachfolge_bnField;
