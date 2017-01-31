@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+
+using Dataline.HealthInsurance.Germany.ContributionRate.V5_1;
+using Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders;
 
 using Xunit;
 
@@ -10,6 +14,14 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
     public class LoadTest
     {
         private static readonly CultureInfo _cultureDE = new CultureInfo("de-DE");
+
+        [Fact]
+        public async Task TestLoadFromWebV5_1()
+        {
+            var loader = new ItsgServerLoader(new BeitragssatzdateiDeserializer(), null);
+            var info = await loader.LoadInfoAsync(CancellationToken.None).ConfigureAwait(false);
+            Assert.NotNull(info);
+        }
 
         [Fact]
         public async Task TestLoadV5()
