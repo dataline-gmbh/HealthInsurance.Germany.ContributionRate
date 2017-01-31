@@ -15,7 +15,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
         /// </summary>
         /// <param name="deserializer">Der zu verwendende <see cref="IDeserializer"/></param>
         /// <param name="proxy">Der zu verwendende <see cref="IWebProxy"/></param>
-        protected WebBeitragssatzdateiLoader(IDeserializer deserializer, IWebProxy proxy)
+        protected WebBeitragssatzdateiLoader(IDeserializer deserializer, IWebProxy proxy = null)
         {
             Proxy = proxy;
             Deserializer = deserializer;

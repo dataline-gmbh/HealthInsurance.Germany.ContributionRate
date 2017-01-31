@@ -21,7 +21,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1.Loaders
         /// </summary>
         /// <param name="deserializer">Der zu verwendende <see cref="IDeserializer"/></param>
         /// <param name="proxy">Der zu verwendende <see cref="IWebProxy"/></param>
-        public ItsgServerLoader(IDeserializer deserializer, IWebProxy proxy)
+        public ItsgServerLoader(IDeserializer deserializer, IWebProxy proxy = null)
             : base(deserializer, proxy)
         {
         }
