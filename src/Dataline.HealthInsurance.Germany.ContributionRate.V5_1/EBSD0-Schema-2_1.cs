@@ -1307,7 +1307,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", ElementName = "AG_gueltig_ab")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public System.DateTime _AG_gueltig_ab {
             get {

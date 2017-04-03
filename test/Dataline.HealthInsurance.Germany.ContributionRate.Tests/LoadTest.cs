@@ -45,6 +45,8 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
             Assert.Equal(new DateTime(2015, 1, 1), kibs.First().ZS_gueltig_ab);
             Assert.Equal(0.9m, decimal.Parse(kibs.First().Beitragssatz.Value, _cultureDE));
 
+            Assert.True(doc.KIBS.Any(x => x.AG_gueltig_ab != null));
+
             Assert.NotNull(doc.DAV);
             Assert.Equal(1, doc.DAV.Count(x => x.bn == "01000240"));
 
