@@ -10,7 +10,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="beitragssatz", IsNullable=false)]
@@ -95,7 +95,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiHDR {
@@ -142,10 +142,9 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="beitragssatz")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="beitragssatz", IsNullable=true)]
     public partial class XmlDatei_Cpt {
         
         private string dateinameField;
@@ -187,7 +186,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="GI4X:/xml-schema/GI4X-basis/1.0")]
     public partial class Wurzel_Ctp {
@@ -207,7 +206,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiEBS {
@@ -324,7 +323,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADR {
@@ -630,7 +629,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRAnschrift {
@@ -738,7 +737,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="beitragssatz", IncludeInSchema=false)]
     public enum ItemChoiceType {
         
@@ -750,7 +749,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public enum BeitragssatzdateiADRAnschriftArt {
         
@@ -762,7 +761,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRKontodaten {
@@ -842,7 +841,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRDFUE {
@@ -911,7 +910,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRDFUEDAVBN {
@@ -931,7 +930,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRDFUEASTBN {
@@ -951,7 +950,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRDFUEWLSTBN {
@@ -971,7 +970,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiADRIK {
@@ -995,7 +994,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", ElementName="gueltig_bis")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public System.DateTime _gueltig_bis {
             get {
@@ -1052,7 +1051,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiUME {
@@ -1147,7 +1146,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiUMEUmlagesatz {
@@ -1279,7 +1278,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiKIBS {
@@ -1307,7 +1306,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="date", ElementName = "AG_gueltig_ab")]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date", ElementName="AG_gueltig_ab")]
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public System.DateTime _AG_gueltig_ab {
             get {
@@ -1386,7 +1385,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiKIBSBeitragssatz {
@@ -1406,7 +1405,7 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="beitragssatz")]
     public partial class BeitragssatzdateiDAV {
