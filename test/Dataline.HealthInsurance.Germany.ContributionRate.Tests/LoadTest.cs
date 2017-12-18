@@ -41,11 +41,11 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
 
             Assert.NotNull(doc.KIBS);
             var kibs = doc.KIBS.Where(x => x.bn == "33868451").ToList();
-            Assert.Equal(1, kibs.Count);
+            Assert.Single(kibs);
             Assert.Equal(new DateTime(2015, 1, 1), kibs.First().ZS_gueltig_ab);
             Assert.Equal(0.9m, decimal.Parse(kibs.First().Beitragssatz.Value, _cultureDE));
 
-            Assert.True(doc.KIBS.Any(x => x.AG_gueltig_ab != null));
+            Assert.Contains(doc.KIBS, x => x.AG_gueltig_ab != null);
 
             Assert.NotNull(doc.DAV);
             Assert.Equal(1, doc.DAV.Count(x => x.bn == "01000240"));
@@ -54,27 +54,27 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.Tests
                 .Where(x => x.Count() != 1)
                 .Select(x => x.Key)
                 .ToList();
-            Assert.Equal(0, dupeAddresses.Count);
+            Assert.Empty(dupeAddresses);
 
             Assert.NotNull(doc.UME);
             var dupeUme = doc.UME.GroupBy(x => new { x.bn, x.gueltig_ab })
                 .Where(x => x.Count() != 1)
                 .Select(x => x.Key)
                 .ToList();
-            Assert.Equal(0, dupeUme.Count);
+            Assert.Empty(dupeUme);
 
             // Im Bereich KIBS dürfen mehrere Einträge vorkommen?
             var dupeKibs = doc.KIBS.GroupBy(x => new { x.bn, x.ZS_gueltig_ab })
                 .Where(x => x.Count() != 1)
                 .Select(x => x.Key)
                 .ToList();
-            Assert.Equal(0, dupeKibs.Count);
+            Assert.Empty(dupeKibs);
 
             var dupeDav = doc.DAV.GroupBy(x => x.bn)
                 .Where(x => x.Count() != 1)
                 .Select(x => x.Key)
                 .ToList();
-            Assert.Equal(0, dupeDav.Count);
+            Assert.Empty(dupeDav);
         }
     }
 }

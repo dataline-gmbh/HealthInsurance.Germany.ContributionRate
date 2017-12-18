@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Dataline.HealthInsurance.Germany.ContributionRate.Tests</AssemblyName>
+    <PackageId>Dataline.HealthInsurance.Germany.ContributionRate.Tests</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Daten\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Dataline.HealthInsurance.Germany.ContributionRate.V5_1\Dataline.HealthInsurance.Germany.ContributionRate.V5_1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+  </ItemGroup>
+
+</Project>

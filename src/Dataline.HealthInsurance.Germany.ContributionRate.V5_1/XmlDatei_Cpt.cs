@@ -17,10 +17,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
             get
             {
                 var time = TimeSpan.ParseExact(Uhrzeit, @"hh\:mm\:ss", _cultureDE);
-#if PCL
-                var localTimestamp = new DateTime(Datum.Year, Datum.Month, Datum.Day, time.Hours, time.Minutes, time.Seconds, DateTimeKind.Local);
-                return new DateTimeOffset(localTimestamp);
-#else
                 TimeZoneInfo info;
                 try
                 {
@@ -34,7 +30,6 @@ namespace Dataline.HealthInsurance.Germany.ContributionRate.V5_1
                 var localDate = Datum.Add(time);
                 var timeZoneOffset = info.GetUtcOffset(localDate);
                 return new DateTimeOffset(localDate, timeZoneOffset);
-#endif
             }
         }
     }
